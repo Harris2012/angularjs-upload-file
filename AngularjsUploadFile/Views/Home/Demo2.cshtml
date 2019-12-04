@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "示例";
+}
+
+@section scripts{
+    <script src="~/scripts/ng-upload-file.js"></script>
+    <script src="~/scripts/demo2.js"></script>
+}
+
+<div class="card">
+    <div class="card-header">【示例2】自定义控件；选择好文件之后直接上传</div>
+    <div class="card-body" ng-app="app2" ng-controller="controller2">
+
+        <div class="card mb-4">
+            <div class="card-header">控件</div>
+            <div class="card-body">
+                <ng-upload-file ng-model="apples"></ng-upload-file>
+            </div>
+        </div>
+
+        <p>
+            <ul>
+                <li ng-repeat="apple in apples track by $index" $rep>
+                    {{apple}}
+                </li>
+            </ul>
+        </p>
+
+        <p>apples = {{apples}}</p>
+
+        <p>
+            <button ng-click="add()">Add</button>
+        </p>
+
+    </div>
+</div>

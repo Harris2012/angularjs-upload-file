@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 上传图片</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+</head>
+<body>
+
+    <nav class="navbar navbar-default bg-light mb-4">
+        @Html.ActionLink("上传图片示例", "index", "home", null, new { @class = "navbar-brand" })
+    </nav>
+
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/1.7.8/angular.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "示例3";
+}
+
+@section scripts{
+    <script src="~/scripts/demo3.js"></script>
+}
+
+<div class="card">
+    <div class="card-header">【示例】创建使用了ngModel的directive</div>
+    <div class="card-body" ng-app="app3" ng-controller="controller3">
+
+        <div class="card mb-4">
+            <div class="card-header">控件</div>
+            <div class="card-body">
+                <clock ng-model="time"></clock>
+            </div>
+        </div>
+
+        <p>time = {{time}}</p>
+
+        <p>time = <input type="text" ng-model="time" /></p>
+
+        <p>
+            <button ng-click="add()">Add</button>
+        </p>
+
+    </div>
+</div>

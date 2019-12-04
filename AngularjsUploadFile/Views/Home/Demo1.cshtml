@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "示例";
+}
+
+@section scripts{
+    <script src="~/scripts/demo1.js"></script>
+}
+
+<div class="card mb-4">
+    <div class="card-header">【示例1】直接绑定 input；点击提交的时候才和其他字段一起提交</div>
+    <div class="card-body" ng-app="app1" ng-controller="controller1">
+
+        <p>
+            <input type="file" ng-model="items" ng-change="doFileChange()" multiple />
+        </p>
+
+        <p>
+            <ul>
+                <li ng-repeat="item in items">
+                    {{item.name}}
+                </li>
+            </ul>
+        </p>
+
+        <hr />
+
+        <button ng-click="doSubmit()">提交</button>
+
+    </div>
+</div>

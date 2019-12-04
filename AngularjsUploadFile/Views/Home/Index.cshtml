@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "示例";
+}
+
+@section scripts{
+    <script src="~/scripts/script.js"></script>
+}
+
+<ul>
+    <li>@Html.ActionLink("【示例1】", "demo1", "home", null, new { target = "_blank" })直接绑定 input；点击提交的时候才和其他字段一起提交</li>
+    <li>@Html.ActionLink("【示例2】", "demo2", "home", null, new { target = "_blank" })自定义控件；选择好文件之后直接上传；本demo只支持上传单个文件</li>
+    <li>@Html.ActionLink("【示例3】", "demo3", "home", null, new { target = "_blank" })创建带ngModel的directive</li>
+</ul>
+
